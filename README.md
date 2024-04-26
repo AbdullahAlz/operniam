@@ -27,11 +27,11 @@ This is an interesting program, it finds the **last** occurrence of a given stri
 
 Ironically, the program does what a simple combination of `find(1)` with `sed(1)` would have done more efficiently: 
 
-> ` find / | sed 's|.*/||'`
+` find / | sed 's|.*/||'`
 
 This command does the same as:
-> `find / > output`\
-> `./remover output / && cat result.txt`
+`find / > output`\
+`./remover output / && cat result.txt`
 
 After finding out about `sed`, this program becomes entirely obsolete.
 
