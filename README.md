@@ -30,6 +30,7 @@ Ironically, the program does what a simple combination of `find(1)` with `sed(1)
 ` find / | sed 's|.*/||'`
 
 This command does the same as:
+
 `find / > output`\
 `./remover output / && cat result.txt`
 
