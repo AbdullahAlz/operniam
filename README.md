@@ -19,7 +19,7 @@ This can blow up very quickly:
     ackermann(5, 0) = 65533
 
 ## `remover.c`
-This is an interesting program, it finds the **latest** occurrence of a given string in every line of a text file and removes the contents of that line up to, and including, that String:
+This is an interesting program, it finds the **last** occurrence of a given string in every line of a text file and removes the contents of that line up to, and including, that String:
 
     String = "/"
     Any line = /folder1/folder2/file_x
