@@ -1,4 +1,4 @@
-# AbdiCode
+# opeRniaM
 ### Overview
 `This repository consists of many independent small programs. Nothing here is of use unless you know what you are looking for`
 
