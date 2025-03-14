@@ -1,12 +1,24 @@
 # opeRniaM
 ### Overview
-`This repository consists of many independent small programs. Nothing here is of use unless you know what you are looking for`
+> This repository consists of many independent small programs. Nothing here is of use unless you know what you are looking for
 
-If any future program in this repository becomes useful enough to be cared about, feel free to use it, but do not expect it to be perfect
+If any future program in this repository becomes useful enough to be cared about, feel free to use it, but do not expect it to be perfect.
 
 There follows a chronological list of the programs in this repository with a brief description.
 
 First is most recent
+
+## `sudeb.sh`
+
+### Set-Up Debian
+
+After wasting an entire night installing and then getting rid of [Debian](https://www.debian.org/), I decided that I needed a script to establish a similar state to what I usually have on my device. I did not think one could get that far with a single script. 
+
+Thanks to [Samastek](https://github.com/Samastek) for his czsh script, which I am used to on my terminal.
+
+### Warning
+I don't recommend using this script on your machine since it currently assumes many parameters that are specific to my devices, such. It could also install software that you don't want but I do.
+
 
 ## `updtdsc`
 
