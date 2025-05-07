@@ -14,8 +14,8 @@ int main(int argc, char*argv[]){
 		fprintf(stderr, "Usage: ./%s <m> <n>", argv[0]);
 		exit(EXIT_FAILURE);
 	}
-	int m = atoi(argv[1]);// don't use atoi in any serious program
-	int n = atoi(argv[2]);// use strtol(3) instead
+	int m = atoi(argv[1]);
+	int n = atoi(argv[2]);
 	printf("Result: %d \n ackermann(a, b) was called: %d times\n", ackermann(m,n), calls);
 
 }

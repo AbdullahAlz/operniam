@@ -8,54 +8,35 @@ There follows a chronological list of the programs in this repository with a bri
 
 First is most recent
 
-## `sudeb.sh`
+## `full-setup.sh`
 
 ### Set-Up Debian
 
-After wasting an entire night installing and then getting rid of [Debian](https://www.debian.org/), I decided that I needed a script to establish a similar state to what I usually have on my device. I did not think one could get that far with a single script. 
-
-Thanks to [Samastek](https://github.com/Samastek) for his czsh script, which I am used to on my terminal.
+This is a script meant automate setting up a machine with newly installed Debian. The goal is to do as much as it can automatically.
 
 ### Warning
-I don't recommend using this script on your machine since it currently assumes many parameters that are specific to my devices, such. It could also install software that you don't want but I do.
+I don't recommend using this script on your machine since it currently assumes many parameters that are specific to my devices (Nvidia GPU). It could also install software that you don't want but I do. This script is currently entirely meant for me to access publicly to set up any new Debian-based device.
+
+## `updtdsc.sh`
+
+This was my first bashscript.
+
+When I moved to Linux, being a [Discord](https://discord.com/) user [(bad)](https://cadence.moe/blog/2020-06-06-why-you-shouldnt-trust-discord), I had to suffer with updates. Whenever a new Discord update comes out, you have to download a .deb file and install it. So instead of doing that manually every time, I wrote this script to replace the discord launcher itself.
+
+It checks for an existing Discord version, checks the up-to-date stable version and, if necessary, downloads and updates discord and in all cases launches the application.
 
 
-## `updtdsc`
-
-This is my first bashscript.
-
-When I moved to Linux, being a [Discord](https://discord.com/) user [(bad)](https://cadence.moe/blog/2020-06-06-why-you-shouldnt-trust-discord), I had to suffer with updates. Whenever a new Discord update comes out, you have to download a .deb file and install it. So instead of doing that manually every time, I wrote this script, which:
-
-- downloads the newest stable Discord version for Debian (.deb)
-- compares the version with the existing one
-- installs the downloaded version if it is a new one
-- removes the .deb file
-
+Launching this script is supposed to be equivalent to running Discord on Windows. `update.exe` checks for an update before running discord itself on Windows. On Linux, or specifically Debian, it cannot do that because it can't run `dpkg -i` without sudo access. Windows on the other hand lets anyone do anything.
 
 ## `perfectNumber.py`
 For some given number of iterations, all even perfect numbers are calculated, using the same old boring method.
 > For a prime number `p`, if $$(2^p-1)$$ is prime, then $$2^{p-1}(2^p-1)$$ is perfect
 
-## `remover.c`
+## `remover.c` (removed)
 
-This is an interesting program, it finds the **last** occurrence of a given string in every line of a text file and removes the contents of that line up to, and including, that String:
+This program finds the **last** occurrence of a given string in every line of a text file and removes the contents of that line up to, and including, that String.
 
-    String = "/"
-    Any line = /folder1/folder2/file_x
-    Output: file_x
-
-Ironically, the program does what a simple combination of `find(1)` with `sed(1)` would have done more efficiently: 
-
-` find / | sed 's|.*/||'`
-
-This command does the same as:
-
-`find / > output`\
-`./remover output / && cat result.txt`
-
-After finding out about the existence of `sed`, this program becomes entirely obsolete.
-
-Usage after Compilation: `./remover <PathToFile> <StringToRemove>`
+Initially used with `/` to obtain the base name of a file. Later, I realized that I could use `sed` or just `basename <path>`
 
 
 ## `ackermann.c`
@@ -74,5 +55,5 @@ This can blow up very quickly:
 - Learning [.md](https://en.wikipedia.org/wiki/markdown) 
 - Having a reason to write random ideas and a place to store them
 - Maybe being helpful to someone one day
-- Having access to public repo anywhere to look things up (not a real reason though) 
+- Using this public repo to get some of the more useful scripts on a new or remote machine 
 - Wasting my and your time
