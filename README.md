@@ -1,6 +1,6 @@
 # opeRniaM
 ### Overview
-> This repository consists of many independent small programs. Nothing here is of use unless you know what you are looking for
+### This repository consists of many independent small programs. Nothing here is of use unless you know what you are looking for
 
 If any future program in this repository becomes useful, feel free to use and improve it. However I recommend reading the code first as I cannot guarantee perfection.
 
