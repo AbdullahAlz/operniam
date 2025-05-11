@@ -2,15 +2,13 @@
 ### Overview
 > This repository consists of many independent small programs. Nothing here is of use unless you know what you are looking for
 
-If any future program in this repository becomes useful enough to be cared about, feel free to use it, but do not expect it to be perfect.
+If any future program in this repository becomes useful, feel free to use and improve it. However I recommend reading the code first as I cannot guarantee perfection.
 
-There follows a chronological list of the programs in this repository with a brief description.
-
-First is most recent
+The following is a chronological list of the programs in this repository with a brief description.
 
 ## `full-setup.sh`
 
-### Set-Up Debian
+### For setting up Debian or Ubuntu
 
 This is a script meant automate setting up a machine with newly installed Debian. The goal is to do as much as it can automatically.
 
@@ -19,14 +17,18 @@ I don't recommend using this script on your machine since it currently assumes m
 
 ## `updtdsc.sh`
 
-This was my first bashscript.
 
-When I moved to Linux, being a [Discord](https://discord.com/) user [(bad)](https://cadence.moe/blog/2020-06-06-why-you-shouldnt-trust-discord), I had to suffer with updates. Whenever a new Discord update comes out, you have to download a .deb file and install it. So instead of doing that manually every time, I wrote this script to replace the discord launcher itself.
+
+This was my first bash script. It automates Discord updates on Debian.
+
+Being a [Discord](https://discord.com/) user [(bad)](https://cadence.moe/blog/2020-06-06-why-you-shouldnt-trust-discord), I had many issues after moving to Debian. Whenever a new Discord update comes out, you have to download a .deb file and install it. So instead of doing that manually every time, I wrote this script to replace the discord launcher itself.
 
 It checks for an existing Discord version, checks the up-to-date stable version and, if necessary, downloads and updates discord and in all cases launches the application.
 
+Launching this script is meant to be equivalent to running Discord on Windows. `update.exe` checks for an update before running discord itself on Windows. As always, read the script yourself before using it. If you do use it, I recommend replacing discord with it. This is done by putting this script in `.local/share/applications` and giving it the right to run.
 
-Launching this script is supposed to be equivalent to running Discord on Windows. `update.exe` checks for an update before running discord itself on Windows. On Linux, or specifically Debian, it cannot do that because it can't run `dpkg -i` without sudo access. Windows on the other hand lets anyone do anything.
+Currently this can only handle `.deb` files.
+
 
 ## `perfectNumber.py`
 For some given number of iterations, all even perfect numbers are calculated, using the same old boring method.
