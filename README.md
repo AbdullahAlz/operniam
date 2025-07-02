@@ -23,9 +23,7 @@ This was my first bash script. It automates Discord updates on Debian.
 
 Being a [Discord](https://discord.com/) user [(bad)](https://cadence.moe/blog/2020-06-06-why-you-shouldnt-trust-discord), I had many issues after moving to Debian. Whenever a new Discord update comes out, you have to download a .deb file and install it. So instead of doing that manually every time, I wrote this script to replace the discord launcher itself.
 
-It checks for an existing Discord version, checks the up-to-date stable version and, if necessary, downloads and updates discord and in all cases launches the application.
-
-Launching this script is meant to be equivalent to running Discord on Windows. `update.exe` checks for an update before running discord itself on Windows. As always, read the script yourself before using it. If you do use it, I recommend replacing discord with it. This is done by putting this script in `.local/share/applications` and giving it the right to run.
+It checks for an existing Discord version, checks the up-to-date stable version and, if necessary, downloads and updates discord.
 
 Currently this can only handle `.deb` files.
 
