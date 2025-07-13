@@ -15,6 +15,12 @@ This is a script meant automate setting up a machine with newly installed Debian
 ### Warning
 I don't recommend using this script on your machine since it currently assumes many parameters that are specific to my devices (Nvidia GPU). It could also install software that you don't want but I do. This script is currently entirely meant for me to access publicly to set up any new Debian-based device.
 
+
+## recursiveExtract.sh
+
+This is a forensic script relying on Sleuthkit to remain in a read-only state while extracting files from a partition image. It uses `fls` and `icat` to extract files and creates directories based on the file paths in the image. 
+
+
 ## `updtdsc.sh`
 
 
