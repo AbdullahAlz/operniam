@@ -6,30 +6,23 @@ If any future program in this repository becomes useful, feel free to use and im
 
 The following is a chronological list of the programs in this repository with a brief description.
 
-## `full-setup.sh`
 
-### For setting up Debian or Ubuntu
+## `recursiveExtract.sh`
 
-This is a script meant automate setting up a machine with newly installed Debian. The goal is to do as much as it can automatically.
+This is a forensic tool that, in a read-only state,  recursively extracts files from a partition image. It uses sleuthkit tools to extract files and creates directories based on the file paths in the image.
 
-### Warning
-I don't recommend using this script on your machine since it currently assumes many parameters that are specific to my devices (Nvidia GPU). It could also install software that you don't want but I do. This script is currently entirely meant for me to access publicly to set up any new Debian-based device.
-
-
-## recursiveExtract.sh
-
-This is a forensic script relying on Sleuthkit to remain in a read-only state while extracting files from a partition image. It uses `fls` and `icat` to extract files and creates directories based on the file paths in the image. 
+May have missed some combination of flags that does this automatically but now there is a script.
 
 
 ## `updtdsc.sh`
 
+Automate Discord updates on Debian.
 
+This was my first bash script, ever.
 
-This was my first bash script. It automates Discord updates on Debian.
+Using [Discord](https://discord.com/) [isnt a great thing](https://cadence.moe/blog/2020-06-06-why-you-shouldnt-trust-discord). On Debian, whenever a new Discord update comes out, you have to download a .deb file and install it.
 
-Being a [Discord](https://discord.com/) user [(bad)](https://cadence.moe/blog/2020-06-06-why-you-shouldnt-trust-discord), I had many issues after moving to Debian. Whenever a new Discord update comes out, you have to download a .deb file and install it. So instead of doing that manually every time, I wrote this script to replace the discord launcher itself.
-
-It checks for an existing Discord version, checks the up-to-date stable version and, if necessary, downloads and updates discord.
+This script checks for an existing Discord version, checks the up-to-date stable version and, if necessary, downloads and updates discord
 
 Currently this can only handle `.deb` files.
 
@@ -58,7 +51,7 @@ This can blow up very quickly:
     ackermann(5, 0) = 65533
 
 # Why I write these
-- Learning [.md](https://en.wikipedia.org/wiki/markdown) 
+- Learning
 - Having a reason to write random ideas and a place to store them
 - Maybe being helpful to someone one day
 - Using this public repo to get some of the more useful scripts on a new or remote machine 
